@@ -2,7 +2,7 @@ from cuenta import Cuenta
 
 class Banco:
     def __init__(self):
-        self.cuentas = []
+        self.cuentas = list[Cuenta] = []
     
     def agregar_cuenta(self, cuenta):
         self.cuentas.append(cuenta)
