@@ -1,5 +1,5 @@
 class Cuenta:
-    def __init__(self, titular, iban, saldo = 0.0):
+    def __init__(self, titular, iban, saldo = 0):
         self.titular = titular
         self.iban = iban
         self.saldo = saldo
@@ -7,7 +7,7 @@ class Cuenta:
     def __str__(self):
         return f'IBAN: {self.iban}\n' \
                f'TITULAR: {self.titular}\n' \
-               f'SALDO: {self.saldo}'
+               'SALDO: {:.2f}'.format(self.saldo)
     def ingresar(self, cantidad):
         self.saldo += cantidad
     def retirar(self, cantidad):
